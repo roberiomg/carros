@@ -2,5 +2,6 @@
     "cSpell.words": [
         "dtos",
         "tsyringe"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
