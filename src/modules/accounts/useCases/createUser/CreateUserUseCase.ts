@@ -12,7 +12,7 @@ class CreateUserUseCase {
         @inject("UsersRepository")
         private userRepository: IUserRepository) {}
 
-        async execute({name, email, password, driver_license}: ICreateUserDTO): Promise<void> {
+        async execute({name, email, password, driver_license, id, avatar}: ICreateUserDTO): Promise<void> {
 
             const userAlreadyExists = await this.userRepository.findByEmail(email)
 
@@ -24,10 +24,12 @@ class CreateUserUseCase {
             const passwordHash = await hash(password, 8)
 
             await this.userRepository.create({
+                id,
                 name,
                 email,
                 password: passwordHash,
-                driver_license
+                driver_license,
+                avatar
             })
         }
     
