@@ -1,8 +1,13 @@
 {
     "cSpell.words": [
+        "arquivo",
+        "caso",
         "dtos",
+        "exista",
+        "existe",
         "middlewares",
-        "tsyringe"
+        "tsyringe",
+        "Verifica"
     ],
     "git.ignoreLimitWarning": true
 }

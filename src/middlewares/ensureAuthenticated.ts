@@ -9,13 +9,13 @@ interface IPayload {
 
 export async function ensureAuthenticated(request:Request, response: Response, next: NextFunction) {
 
-    const authHearder = request.headers.authorization
+    const authHeader = request.headers.authorization
 
-    if(!authHearder) {
+    if(!authHeader) {
         throw new AppError("Token missing", 401);
     }
 
-    const [, token] = authHearder.split(" ")
+    const [, token] = authHeader.split(" ")
 
     try {
         const { sub: user_id } = verify(token, "af80ed271812f8f278b7e6dcab669516") as IPayload
