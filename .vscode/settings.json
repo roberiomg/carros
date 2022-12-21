@@ -1,12 +1,15 @@
 {
     "cSpell.words": [
+        "aplicativo",
         "arquivo",
         "caso",
         "dtos",
         "exista",
         "existe",
+        "jeste",
         "middlewares",
         "tsyringe",
+        "typeorm",
         "Verifica"
     ],
     "git.ignoreLimitWarning": true

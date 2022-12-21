@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\ROBERIO\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add jest @types/jest –D
+  C:\Program Files\nodejs\node.exe C:\Users\ROBERIO\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add tsconfig-paths -D
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\ROBERIO\AppData\Roaming\npm;C:\Program Files\PostgreSQL\15\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\ROBERIO\AppData\Local\Microsoft\WindowsApps;C:\Users\ROBERIO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ROBERIO\AppData\Roaming\npm
@@ -14,15 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  TypeError [ERR_UNESCAPED_CHARACTERS]: https://registry.yarnpkg.com/–D: Request path contains unescaped characters
-      at new NodeError (node:internal/errors:393:5)
-      at new ClientRequest (node:_http_client:182:13)
-      at Object.request (node:https:360:10)
-      at module.exports.Request.start (C:\Users\ROBERIO\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141452:32)
-      at module.exports.Request.end (C:\Users\ROBERIO\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:142211:10)
-      at end (C:\Users\ROBERIO\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141265:14)
-      at Immediate.<anonymous> (C:\Users\ROBERIO\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141279:7)
-      at process.processImmediate (node:internal/timers:471:21)
+  Error: EPERM: operation not permitted, unlink 'C:\Rocketseat\Trilha Nodejs\06 - Aluguel de carros\aplicativo\node_modules\.bin\ts-node-dev'
 
 npm manifest: 
   {
@@ -31,8 +23,8 @@ npm manifest:
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-      "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+      "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+      "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
       "test": "jest"
     },
     "dependencies": {

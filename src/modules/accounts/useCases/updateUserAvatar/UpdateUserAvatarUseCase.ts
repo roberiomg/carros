@@ -1,8 +1,12 @@
+
+import { IUserRepository } from "@modules/accounts/repositories/IUserRepository";
 import { inject, injectable } from "tsyringe";
+import { deleteFile } from "utils/file";
 
-import { deleteFile } from "../../../../utils/file"
 
-import { IUserRepository } from "../../repositories/IUserRepository";
+
+
+
 
 
 interface IRequest {
