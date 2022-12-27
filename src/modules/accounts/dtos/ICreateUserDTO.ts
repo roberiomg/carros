@@ -8,4 +8,4 @@ interface ICreateUserDTO {
     avatar: string
 }
 
-export { ICreateUserDTO }
+export { ICreateUserDTO } 
